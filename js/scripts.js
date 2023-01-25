@@ -8,9 +8,25 @@ let pokemonList = [
     {name: 'Caterpie', height: '1', type: ['worm']}
 ]
 
-for (let i = 0; i <pokemonList.length; i++){
-    document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height +")");
-if (pokemonList[i].height >= 1.5) {
-    document.write(' - Wow! that is a big Pokemon!') + "</p>"
+//printArrayDetails function declaration
+function printArrayDetails(){
+    for (let i = 0; i < pokemonList.length; i++) {
+        document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height +")");
+        if (pokemonList[i].height >= 1.5) {
+            document.write(' - Wow! that is a big Pokemon!') + "</p>"  
+        }
     }
 }
+
+
+// Calling printArrayDetails function twice
+printArrayDetails();
+printArrayDetails();
+
+//for (let i = 0; i <pokemonList.length; i++){
+//    document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height +")");
+//if (pokemonList[i].height >= 1.5) {
+//    document.write(' - Wow! that is a big Pokemon!') + "</p>"
+//    }
+//}
+

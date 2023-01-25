@@ -1,10 +1,14 @@
 
-.page-header__item {
+.pokemon-logo {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 200px;
     flex: 0 1 200px;
-    max-height: 100px;
+    max-height: 200px;
     float: inline-start;
+    -webkit-animation: 4s color-change infinite alternate linear;
+    animation: 1s enterFromLeft 1 alternate linear;
+    margin-left: auto;
+    padding: 0;
 }
 
 h1 {
@@ -22,6 +26,7 @@ h1 {
     text-align: center;
     max-width: 375px;
     margin-left: 10px;
+    animation: .5s enterFromLeft 1 alternate linear;
 }
 
 .pokedex {
@@ -30,15 +35,22 @@ h1 {
     border-top: 2px solid #ff000f;
     border-bottom: 2px solid #ff000f;
     max-width: 375px;
-    margin: 10px;
+    margin-left: 10px;
+    padding: 0;
     background-color: white;
     color: #2a75bb;
+    animation: .5s enterFromLeft 1 alternate linear;
 }
 .pokemon {
     display: block;
     text-align: left;
     max-width: 375px;
-    margin-left: 10px;
-    
-    
+    margin-left: 10px; 
 }
+
+/*enter from left animation*/
+@keyframes enterFromLeft {
+    33% {opacity: 0; transform: translateX(-100vw);}
+   66% {opacity: 1; transform: translateX(-100vw);}
+  100% {transform: translateX(0);}
+  }
