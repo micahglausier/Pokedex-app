@@ -51,6 +51,13 @@ h1 {
 /*enter from left animation*/
 @keyframes enterFromLeft {
     33% {opacity: 0; transform: translateX(-100vw);}
-   66% {opacity: 1; transform: translateX(-100vw);}
-  100% {transform: translateX(0);}
+    66% {opacity: 1; transform: translateX(-100vw);}
+    100% {transform: translateX(0);}
   }
+
+  /*Colors used:
+  Primary: white
+  Secondary: #2a75bb
+  Alternate: #ffcb05
+  Alternate 2: #ff000f
+  */
