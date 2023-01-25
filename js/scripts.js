@@ -4,7 +4,8 @@ let pokemonList = [
     {name: 'Bulbasaur', height: '0.7', type: ['grass', 'poison']},
     {name: 'Kangaskhan', height: '2.2', type: ['normal']},
     {name: 'Gastly', height: '1.3', type: ['ghost', 'poison']},
-    {name: 'Golem', height: '1.4', ttpe: ['rock', 'ground']} 
+    {name: 'Golem', height: '1.4', type: ['rock', 'ground']},
+    {name: 'Caterpie', height: '1', type: ['worm']}
 ]
 
 for (let i = 0; i <pokemonList.length; i++){
