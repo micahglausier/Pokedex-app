@@ -1,4 +1,3 @@
-
 .pokemon-logo {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 200px;
@@ -6,7 +5,7 @@
     max-height: 200px;
     float: inline-start;
     -webkit-animation: 4s color-change infinite alternate linear;
-    animation: 1s enterFromLeft 1 alternate linear;
+    animation: 1.5s enterFromLeft 1 alternate linear;
     margin-left: auto;
     padding: 0;
 }
@@ -18,7 +17,7 @@ h1 {
     background-color: white;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: #2a75bb;
-    font-family:'Franklin Gothic Medium', 'Arial Bold', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Bold", Arial, sans-serif;
 }
 
 .pokedex-title {
@@ -26,7 +25,8 @@ h1 {
     text-align: center;
     max-width: 375px;
     margin-left: 10px;
-    animation: .5s enterFromLeft 1 alternate linear;
+    -webkit-animation: 1s enterFromLeft 1 alternate linear;
+            animation: 1s enterFromLeft 1 alternate linear;
 }
 
 .pokedex {
@@ -39,23 +39,51 @@ h1 {
     padding: 0;
     background-color: white;
     color: #2a75bb;
-    animation: .5s enterFromLeft 1 alternate linear;
+    -webkit-animation: 1s enterFromLeft 1 alternate linear;
+            animation: 1s enterFromLeft 1 alternate linear;
 }
 .pokemon {
     display: block;
     text-align: left;
     max-width: 375px;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 
 /*enter from left animation*/
+@-webkit-keyframes enterFromLeft {
+    60% {
+        opacity: 0;
+        -webkit-transform: translateX(-100vw);
+                transform: translateX(-100vw);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateX(-50vw);
+                transform: translateX(-50vw);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
 @keyframes enterFromLeft {
-    33% {opacity: 0; transform: translateX(-100vw);}
-    66% {opacity: 1; transform: translateX(-100vw);}
-    100% {transform: translateX(0);}
-  }
+    60% {
+        opacity: 0;
+        -webkit-transform: translateX(-100vw);
+                transform: translateX(-100vw);
+    }
+    80% {
+        opacity: 1;
+        -webkit-transform: translateX(-50vw);
+                transform: translateX(-50vw);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
 
-  /*Colors used:
+/*Colors used:
   Primary: white
   Secondary: #2a75bb
   Alternate: #ffcb05
