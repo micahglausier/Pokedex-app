@@ -1,21 +1,24 @@
+
 .pokemon-logo {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 200px;
     flex: 0 1 200px;
     max-height: 200px;
-    float: inline-start;
-    -webkit-animation: 4s color-change infinite alternate linear;
-    animation: 5s fadeIn 1 alternate linear;
-    margin-left: auto;
+    float: left;
+    animation: .5s enterFromLeft 1 alternate linear;
+    margin-left: 100px;
     padding: 0;
+    margin-top: 25px;
+    background-color: #2a75bb;
 }
+
 
 h1 {
     font-size: 30px;
     font-weight: 700;
     color: #ffcb05;
-    background-color: white;
-    -webkit-text-stroke-width: 1.5px;
+    background-color: #ff000f;
+    -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #2a75bb;
     font-family: "Franklin Gothic Medium", "Arial Bold", Arial, sans-serif;
 }
@@ -30,15 +33,16 @@ h1 {
 }
 
 .pokedex {
-    border-left: 2px solid #ff000f;
-    border-right: 2px solid #ff000f;
-    border-top: 2px solid #ff000f;
-    border-bottom: 2px solid #ff000f;
+    border-left: 2px solid #2a75bb;
+    border-right: 2px solid #2a75bb;
+    border-top: 2px solid #2a75bb;
+    border-bottom: 2px solid #2a75bb;
     max-width: 380px;
     margin-left: 10px;
+    margin-top: 25px;
     padding: 0;
-    background-color: white;
-    color: #2a75bb;
+    background-color: #ff000f;
+    color: white;
     -webkit-animation: .5s enterFromLeft 1 alternate linear;
             animation: .5s enterFromLeft 1 alternate linear;
     
