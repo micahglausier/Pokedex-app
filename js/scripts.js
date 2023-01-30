@@ -23,6 +23,24 @@ let pokemonRepository = (function () {
         }
     };
 
+//adds pokemon and validates typeof
+    function add(pokemon) {
+        if (typeof pokemon !== "object") {
+          console.log("A pokemon is required");
+        }
+    
+        let keys = Object.keys(pokemon);
+        if (!keys.includes("name")) {
+          console.log("Missing Requirements");
+        }
+        pokemonList.push(pokemon);
+      }
+//filters pokemon by name
+    function filterPokemonByName(name) {
+        let result = getAll().filter((pokemon) => pokemon.name == name);
+        return result[0];   // starting index of 0
+      }
+
 })();
 
 
