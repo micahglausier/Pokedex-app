@@ -42,7 +42,7 @@ pokemonList.forEach(function(pokemon) {
     document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ")" + " (type: " + pokemon.type + ")");
 });
 
-pokemonRepository.getAll(function(pokemon) {
+pokemonRepository.getAll().forEach(function(pokemon) {
     document.write(pokemon.name +  pokemon.height);
   });
 
