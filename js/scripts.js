@@ -14,42 +14,27 @@ let pokemonRepository = (function () {
         { name: "Pikachu", height: "1.04", type: ["electric"] },
     ]
 
-    function add(pokemon) {
-        pokemonList.push(pokemon);
-    }
-
-    function getAll() {
-        return pokemonList;
-    }
-
     return {
-        add: add,
-        getAll: getAll
+        add: function(pokemon){
+            pokemonList.push(pokemon);
+        },
+        getAll: function () {
+            return pokemonList;
+        }
     };
+
 })();
 
-// let pokemonList2 = [
-    // different set of Pokémon objects
-//      { name: "Butterfree", height: "3.07", type: ["bug", "flying"] },
-//      { name: "Nidoking", height: "4.07", type: ["ground", "poison"] },
-//      { name: "Blastoise", height: "5.03", type: ["water"] },
-//      { name: "Ninetales", height: "3.07", type: ["fire"] },
-//      { name: "Pikachu", height: "1.04", type: ["electric"] },
-// ];
 
-//for each function
-pokemonList.forEach(function(pokemon) {
+// forEach function added to replace for function
+pokemonRepository.getAll().forEach(function(pokemon) {
     document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ")" + " (type: " + pokemon.type + ")");
 });
 
-pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write(pokemon.name +  pokemon.height);
-  });
 
 
 
-
-//old for function replaced with for each
+//old for function replaced with forEach
 //printArrayDetails function declaration
 // function printArrayDetails(list) {
 //     for (let i = 0; i < list.length; i++) {
