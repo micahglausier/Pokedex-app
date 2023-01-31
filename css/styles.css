@@ -4,12 +4,16 @@
     -ms-flex: 0 1 200px;
     flex: 0 1 200px;
     max-height: 200px;
-    float: left;
     animation: .5s enterFromLeft 1 alternate linear;
     margin-left: 100px;
-    padding: 0;
-    margin-top: 25px;
-    background-color: #2a75bb;
+    padding: 0px;
+    margin-top: auto;
+    background-image: transparent;
+    margin-bottom: 0px;
+    display: grid;
+   position: relative; 
+   bottom: 0;  
+   float: inline-start;
 }
 
 
@@ -17,15 +21,15 @@ h1 {
     font-size: 30px;
     font-weight: 700;
     color: #ffcb05;
-    background-color: #ff000f;
+    background-image: transparent;
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #2a75bb;
-    font-family: "Franklin Gothic Medium", "Arial Bold", Arial, sans-serif;
+    font-family: Permanent Marker;
 }
 
 .pokedex-title {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     max-width: 375px;
     margin-left: 10px;
     -webkit-animation: .5s enterFromLeft 1 alternate linear;
@@ -33,23 +37,24 @@ h1 {
 }
 
 .pokedex {
-    border-left: 2px solid #2a75bb;
-    border-right: 2px solid #2a75bb;
-    border-top: 2px solid #2a75bb;
-    border-bottom: 2px solid #2a75bb;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     max-width: 380px;
     margin-left: 10px;
-    margin-top: 25px;
+    margin-top: 10px;
     padding: 0;
-    background-color: #ff000f;
+    background-image: linear-gradient(to right top, #051937, #002961, #00398e, #0049bc, #1258eb);
     color: white;
     -webkit-animation: .5s enterFromLeft 1 alternate linear;
             animation: .5s enterFromLeft 1 alternate linear;
     
 }
 .pokemon {
-    display: block;
+    display: grid;
     text-align: left;
+    justify-content: center;
     max-width: 375px;
     margin-left: 10px;
 }

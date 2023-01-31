@@ -1,5 +1,6 @@
-//pokemon list variable//
+//pokemon Repository IIFE
 let pokemonRepository = (function () {
+    //pokemonList Variable
     let pokemonList = [
         //add Pokemon Objects, with Keys: name, height, and types//
         { name: "Bulbasaur", height: "0.7", type: ["grass", "poison"] },
@@ -14,6 +15,7 @@ let pokemonRepository = (function () {
         { name: "Pikachu", height: "1.04", type: ["electric"] },
     ]
 
+//return functions
     return {
         add: function(pokemon){
             pokemonList.push(pokemon);
@@ -35,6 +37,7 @@ let pokemonRepository = (function () {
         }
         pokemonList.push(pokemon);
       }
+
 //filters pokemon by name
     function filterPokemonByName(name) {
         let result = getAll().filter((pokemon) => pokemon.name == name);
@@ -44,7 +47,7 @@ let pokemonRepository = (function () {
 })();
 
 
-// forEach function added to replace for function
+// (forEach) function added to replace (for) function
 pokemonRepository.getAll().forEach(function(pokemon) {
     document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ")" + " (type: " + pokemon.type + ")");
 });
