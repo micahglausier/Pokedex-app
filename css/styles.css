@@ -3,17 +3,16 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 1 200px;
     flex: 0 1 200px;
-    max-height: 200px;
-    animation: .5s enterFromLeft 1 alternate linear;
-    margin-left: 100px;
+    max-width: 75%;
+    height: auto;
+    animation: 5s fadeIn 1 alternate linear;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0px;
     margin-top: auto;
     background-image: transparent;
     margin-bottom: 0px;
-    display: grid;
-   position: relative; 
-   bottom: 0;  
-   float: inline-start;
+    display: block
 }
 
 
@@ -32,8 +31,8 @@ h1 {
     justify-content: center;
     max-width: 375px;
     margin-left: 10px;
-    -webkit-animation: .5s enterFromLeft 1 alternate linear;
-            animation: .5s enterFromLeft 1 alternate linear;
+    -webkit-animation: 3s enterFromLeft 1 alternate linear;
+            animation: 3s enterFromLeft 1 alternate linear;
 }
 
 .pokedex {
@@ -42,14 +41,15 @@ h1 {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     max-width: 380px;
-    margin-left: 10px;
     margin-top: 10px;
     padding: 0;
     background-image: linear-gradient(to right top, #051937, #002961, #00398e, #0049bc, #1258eb);
     color: white;
-    -webkit-animation: .5s enterFromLeft 1 alternate linear;
-            animation: .5s enterFromLeft 1 alternate linear;
-    
+    -webkit-animation: 3s enterFromLeft 1 alternate linear;
+            animation: 3s enterFromLeft 1 alternate linear;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .pokemon {
     display: grid;
@@ -58,6 +58,7 @@ h1 {
     max-width: 375px;
     margin-left: 10px;
 }
+
 
 /*enter from left animation*/
 @-webkit-keyframes enterFromLeft {
