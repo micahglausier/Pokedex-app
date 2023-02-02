@@ -22,7 +22,8 @@ let pokemonRepository = (function () {
         },
         getAll: function () {
             return pokemonList;
-        }
+        },
+        addListItem: addListItem
     };
 
 //adds pokemon and validates typeof
@@ -30,7 +31,7 @@ let pokemonRepository = (function () {
         if (typeof pokemon !== "object") {
           console.log("A pokemon is required");
         }
-    
+
         let keys = Object.keys(pokemon);
         if (!keys.includes("name")) {
           console.log("Missing Requirements");
@@ -38,19 +39,59 @@ let pokemonRepository = (function () {
         pokemonList.push(pokemon);
       }
 
+      function addListItem(pokemon){
+        let pokemonList = document.querySelector(".pokemon-list");
+        let listpokemon = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-class")
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+        // Create an event listener to every button  
+        button.addEventListener('click', function (event) {
+            showDetails(pokemon);
+        })
+      }   
+        
+      pokemonRepository.getAll().forEach(function(pokemon) {
+        let pokemonList = document.querySelector(".pokemon-list");
+        if (!pokemonList) {
+          pokemonList = document.createElement("ul");
+          pokemonList.classList.add("pokemon-list");
+          document.body.appendChild(pokemonList);
+        }
+      
+        let listpokemon = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-class");
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+        buttonSelect.addEventListener('click', function (event) {
+            showDetails(pokemon);
+        });  
+      });
+
+      //showDetails function
+      function showDetails(pokemon){
+            console.log(pokemon.name)
+        };
+    
+
 //filters pokemon by name
     function filterPokemonByName(name) {
         let result = getAll().filter((pokemon) => pokemon.name == name);
         return result[0];   // starting index of 0
-      }
+      };
 
 })();
 
 
 // (forEach) function added to replace (for) function
 pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write("<p>" + pokemon.name + " (height: " + pokemon.height + ")" + " (type: " + pokemon.type + ")");
+   pokemonRepository.addListItem(pokemon);
 });
+
 
 
 
