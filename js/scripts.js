@@ -73,7 +73,8 @@ let pokemonRepository = (function() {
                 'text-light',
                 'bg-dark',
                 'border',
-                'border-dark'
+                'border-dark',
+                'toggle'
             );
             modalButton.setAttribute('type', 'button');
             modalButton.setAttribute('data-toggle', 'modal');
