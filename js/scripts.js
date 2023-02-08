@@ -9,7 +9,7 @@ let pokemonRepository = (function() {
     function getPokemonListContents() {
         return pokemonList;
     }
-    // Loads initial object of name and detailsUrl and adds it to the pokemonList
+    // Loads name and detailsUrl and adds it to the pokemonList
     function loadDataFromApi() {
         return fetch(apiUrl)
             .then((response) => response.json())
@@ -24,7 +24,7 @@ let pokemonRepository = (function() {
             })
             .catch((err) => console.error(err));
     }
-    // Loads the auxiliary details as key/value pairs for each Pokemon and stores it in the pokemonList
+    // Loads details as pairs for each Pokemon and stores it in the pokemonList
     function loadDetails(listItem) {
         let url = listItem.detailsUrl;
         return fetch(url)
@@ -46,12 +46,12 @@ let pokemonRepository = (function() {
             })
             .catch((err) => console.error(err));
     }
-    // Renders loaded content to the page in the form of cards
+    // Adds loaded content to the page in the form of cards
     function addToDom(pokemon) {
         loadDetails(pokemon).then(() => {
             let pokemonGrid = document.querySelector('.pokemon-grid');
             let card = document.createElement('div');
-            card.classList.add('card', 'text-center', 'bg-light', 'm-1', 'flex-grow-0', 'border', 'border-warning');
+            card.classList.add('card', 'text-center', 'bg-secondary', 'm-1', 'flex-grow-0', 'border', 'border-dark');
             card.setAttribute('style', 'max-width: 33%');
             card.setAttribute('style', 'min-width: 200px');
 
@@ -70,10 +70,10 @@ let pokemonRepository = (function() {
                 'btn-primary',
                 'btn-lg',
                 'text-capitalize',
-                'text-warning',
-                'bg-secondary',
+                'text-light',
+                'bg-dark',
                 'border',
-                'border-warning'
+                'border-dark'
             );
             modalButton.setAttribute('type', 'button');
             modalButton.setAttribute('data-toggle', 'modal');
